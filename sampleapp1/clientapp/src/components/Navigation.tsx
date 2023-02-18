@@ -1,5 +1,6 @@
 import { Menubar } from 'primereact/menubar';
 import { useNavigate  } from "react-router-dom";
+import AuthenticationButton from './auth/AuthenticationButton';
 
 const Navigation = () => {
 
@@ -11,15 +12,22 @@ const Navigation = () => {
     }},
     {label: 'About', icon: 'pi pi-fw pi-file', command: () =>{
       navigate('/about')
+    }},
+    {label: 'Secured', icon: 'pi pi-fw pi-file', command: () =>{
+      navigate('/secured')
+    }},
+    {label: 'Profile', icon: 'pi pi-fw pi-file', command: () =>{
+      navigate('/profile')
     }}
   ]
 
     return(
         <div>
           <nav>
+            <ul> <AuthenticationButton/></ul>
             <ul>
               <Menubar model={navlist} />
-            </ul>
+            </ul>        
           </nav>           
         </div>
     )
