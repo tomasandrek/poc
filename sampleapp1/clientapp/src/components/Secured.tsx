@@ -34,10 +34,9 @@ const Secured = () => {
         }
       
         // call the function
-        fetchData()
-          // make sure to catch any error
-          .catch(console.error);;
-      })
+        fetchData()// make sure to catch any error
+          .catch(console.error);
+      },[])
 
      function getPage(){
          if(isAuthenticated){

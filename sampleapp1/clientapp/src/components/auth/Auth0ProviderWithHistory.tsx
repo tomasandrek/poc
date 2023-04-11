@@ -16,10 +16,11 @@ const Auth0ProviderWithHistory = (props: React.PropsWithChildren<MyProps>) => {
 
   return (
     <Auth0Provider
-    domain="dev-o0puee4o.eu.auth0.com"
-    clientId="qiEopV8nMv8FnQKFctboyGlxdHnmtdg2"
-    redirectUri={window.location.origin}
-    onRedirectCallback={onRedirectCallback}>
+        audience="https://localhost:7289"
+        domain="dev-o0puee4o.eu.auth0.com"
+        clientId="qiEopV8nMv8FnQKFctboyGlxdHnmtdg2"
+        redirectUri={window.location.origin}
+        onRedirectCallback={onRedirectCallback}>
       {props.children}
     </Auth0Provider>
   );

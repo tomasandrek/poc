@@ -1,0 +1,15 @@
+POST https://dev-o0puee4o.eu.auth0.com/oauth/token
+Content-Type: application/json
+
+{
+  "client_id": "DhlVWH2n68SRI0VzoNwV3HnlSogA9yO3",
+  "client_secret": "PutYourSecretHere",
+  "audience": "https://localhost:7289",
+  "grant_type": "client_credentials"
+}
+
+###
+GET https://localhost:7289/WeatherForecast/
+Authorization: Bearer PutYourTokenHere
+
+###
